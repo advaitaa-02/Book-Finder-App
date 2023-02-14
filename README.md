@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Book-Finder App
 
-## Available Scripts
+This is a responsive web application made using HTML,CSS,Node.JS,React and API. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) . It takes in the name of the book and shows the availabilty of the book.
 
-In the project directory, you can run:
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Advaitaa Bhardwaj](https://github.com/advaitaa-02/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+To deploy this application on your computer follow the following steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+       1. Clone this repository on your computer
+       2. Open the main folder in VSCode or any other editor of your choice
+       3. Run these commands in the main project directory
+```bash
+  npm i
+  npm start
+```
+       4. After running the above commands your app should start running on a port 3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+       5. After these steps, the webpage should look something like this:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+       
+![image](https://user-images.githubusercontent.com/92883292/218706172-6ca894ca-25fc-45c2-bf35-386b76c81114.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+       6. Type any book name, for example It Ends with Us, and click on "Search button", the webpage would look like this:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/92883292/218706614-97ba3ec7-2651-495a-b35f-99806be5e094.png)
+  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        7. You can also click on the Home and the About section on the top right corner to navigate back to the Home and to know more about the site.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## API Reference
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Get all items
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```http
+  GET /api/items
+```
 
-### Code Splitting
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Get item
 
-### Analyzing the Bundle Size
+```http
+  GET /api/items/${id}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-### Making a Progressive Web App
+#### add(num1, num2)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Takes two numbers and returns the sum.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
